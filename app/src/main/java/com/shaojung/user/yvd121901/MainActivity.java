@@ -1,4 +1,4 @@
-package com.example.user.yvd121901;
+package com.shaojung.user.yvd121901;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -10,10 +10,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class MainActivity extends AppCompatActivity {
     NotificationManager nm;
     MyReceiver receiver;
     Intent it;
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         it = new Intent(MainActivity.this, MyService.class);
         receiver = new MyReceiver();
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     public void clickShow(View v)

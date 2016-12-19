@@ -1,4 +1,4 @@
-package com.example.user.yvd121901;
+package com.shaojung.user.yvd121901;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
