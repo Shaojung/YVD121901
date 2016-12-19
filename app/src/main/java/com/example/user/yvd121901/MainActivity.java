@@ -32,4 +32,10 @@ public class MainActivity extends AppCompatActivity {
         Notification notification = builder.build();
         nm.notify(1, notification);
     }
+
+    public void clickService(View v)
+    {
+        Intent it = new Intent(MainActivity.this, MyService.class);
+        startService(it);
+    }
 }
