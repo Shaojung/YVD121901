@@ -11,11 +11,13 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
     NotificationManager nm;
+    Intent it;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        it = new Intent(MainActivity.this, MyService.class);
     }
 
     public void clickShow(View v)
@@ -35,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickService(View v)
     {
-        Intent it = new Intent(MainActivity.this, MyService.class);
         startService(it);
+    }
+
+    public void clickStop(View v)
+    {
+        stopService(it);
     }
 }
