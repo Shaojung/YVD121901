@@ -42,4 +42,22 @@
         android:layout_alignParentStart="true"
         android:id="@+id/button3"
         android:onClick="clickStop" />
+
+    <Button
+        android:text="Regist Screen On"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button3"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button4"
+        android:onClick="clickOn" />
+
+    <Button
+        android:text="Regist Screen Off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button5"
+        android:onClick="clickOff" />
 </RelativeLayout>
